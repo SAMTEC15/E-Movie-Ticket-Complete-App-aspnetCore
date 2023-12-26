@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "E-MovieTicket.Common/1.0.0": {
+        "runtime": {
+          "E-MovieTicket.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "E-MovieTicket.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

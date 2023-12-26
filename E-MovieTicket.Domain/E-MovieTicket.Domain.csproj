@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>E_MovieTicket.Domain</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-MovieTicket.Common\E-MovieTicket.Common.csproj" />
+  </ItemGroup>
+
+</Project>

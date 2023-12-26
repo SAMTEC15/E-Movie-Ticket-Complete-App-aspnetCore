@@ -1,0 +1,11 @@
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\bin\Debug\net7.0\E-MovieTicket.Application.deps.json
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\bin\Debug\net7.0\E-MovieTicket.Application.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\bin\Debug\net7.0\E-MovieTicket.Application.pdb
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.AssemblyInfoInputs.cache
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.AssemblyInfo.cs
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.csproj.CoreCompileInputs.cache
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\refint\E-MovieTicket.Application.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.pdb
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\ref\E-MovieTicket.Application.dll

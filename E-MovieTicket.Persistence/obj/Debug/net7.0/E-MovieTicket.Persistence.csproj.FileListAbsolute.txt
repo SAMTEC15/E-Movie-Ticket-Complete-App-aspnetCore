@@ -1,0 +1,5 @@
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Persistence\obj\Debug\net7.0\E-MovieTicket.Persistence.csproj.AssemblyReference.cache
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Persistence\obj\Debug\net7.0\E-MovieTicket.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Persistence\obj\Debug\net7.0\E-MovieTicket.Persistence.AssemblyInfoInputs.cache
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Persistence\obj\Debug\net7.0\E-MovieTicket.Persistence.AssemblyInfo.cs
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Persistence\obj\Debug\net7.0\E-MovieTicket.Persistence.csproj.CoreCompileInputs.cache

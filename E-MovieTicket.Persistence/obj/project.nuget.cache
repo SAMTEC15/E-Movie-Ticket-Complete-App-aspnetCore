@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "tvthsr3kKy6wDbxP4CQrzPQJ/oroeyou/1qxPjy8RSCP/JzMitbousqmUKPSqWutow0tnOpkZcrQbxDAGW+PHw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Persistence\\E-MovieTicket.Persistence.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0\\microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
