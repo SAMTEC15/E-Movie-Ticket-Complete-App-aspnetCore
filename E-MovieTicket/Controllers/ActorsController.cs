@@ -1,21 +1,20 @@
 ﻿using E_MovieTicket.Persistence.Context;
 using E_MovieTicket.Persistence.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace E_MovieTicket.Controllers
 {
     public class ActorsController : Controller
     {
-        private readonly EMovieTicketDbContext _eMovieTicketDbContext;
+        private readonly IActorRespository _actorRespository;
 
-        public ActorsController(EMovieTicketDbContext eMovieTicketDbContext)
+        public ActorsController(IActorRespository actorRespository)
         {
-            _eMovieTicketDbContext = eMovieTicketDbContext;
+            _actorRespository = actorRespository;
         }
         public async Task<IActionResult> Index()
         {
-            var data = await _eMovieTicketDbContext.Actors.ToListAsync();
+            var data = await _actorRespository.GetAllActor();
             return View(data);
         }
     }

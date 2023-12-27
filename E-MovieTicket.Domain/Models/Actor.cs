@@ -11,7 +11,7 @@ namespace E_MovieTicket.Domain.Models
     {
         [Key]
         public int Id { get; set; }
-        [Display(Name = "Profile Picture Url")]
+        [Display(Name = "Profile Picture")]
         public string ProfilePictureUrl { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

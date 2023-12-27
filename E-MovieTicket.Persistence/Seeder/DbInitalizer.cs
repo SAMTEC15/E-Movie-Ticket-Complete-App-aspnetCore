@@ -26,17 +26,19 @@ namespace E_MovieTicket.Persistence.Seeder
                     // Create a list of cinemas to be added
                     var cinemas = new List<Cinema>()
                     {
-                            new Cinema()
-                            {
-                                Name = "Cinema 1",
-                                Logo = "http://dotnethrow.net/images/cinemas/cinema-1.jpeg",
-                                Description = "This is the description of Cinema 1"
-                            },
+                              new Cinema()
+                              {
+
+                                    Name = "Cinema 1",
+                                    Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
+                                    Description = "This is the description of the first cinema"
+                              },
+
                             new Cinema()
                             {
                                 Name = "Cinema 2",
-                                Logo = "http://dotnethrow.net/images/cinemas/cinema-2.jpeg",
-                                Description = "This is the description of Cinema 2"
+                                Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
+                                Description = "This is the description of the first cinema"
                             },
                             new Cinema()
                             {
@@ -59,8 +61,8 @@ namespace E_MovieTicket.Persistence.Seeder
                     };
 
                     // Add the list of cinemas to the context
-                    context.Cinemas.AddRangeAsync(cinemas);
-                    context.SaveChanges(); // Save changes to the database
+                    await context.Cinemas.AddRangeAsync(cinemas);
+                    await context.SaveChangesAsync(); // Save changes to the database
                 }
 
                 if (!context.Actors.Any())
@@ -104,8 +106,8 @@ namespace E_MovieTicket.Persistence.Seeder
                         },
                     };
 
-                  await  context.Actors.AddRangeAsync(actors);
-                   await context.SaveChangesAsync(); // Save changes to the database using async
+                    await context.Actors.AddRangeAsync(actors);
+                    await context.SaveChangesAsync(); // Save changes to the database using async
                 }
 
                 if (!context.Producers.Any())
@@ -219,8 +221,8 @@ namespace E_MovieTicket.Persistence.Seeder
                         },
                     };
 
-                   await context.Movies.AddRangeAsync(movies);                    
-                   await context.SaveChangesAsync(); // Save changes to the database using async
+                    await context.Movies.AddRangeAsync(movies);
+                    await context.SaveChangesAsync(); // Save changes to the database using async
                 }
 
                 if (!context.ActorMovies.Any())
@@ -252,7 +254,7 @@ namespace E_MovieTicket.Persistence.Seeder
                                 ActorId = 5,
                                 MovieId = 7,
                             },
-                   
+
                     };
 
                     await context.ActorMovies.AddRangeAsync(movies);

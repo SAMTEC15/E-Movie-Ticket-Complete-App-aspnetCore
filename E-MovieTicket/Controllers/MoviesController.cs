@@ -14,7 +14,7 @@ namespace E_MovieTicket.Controllers
         public async Task<IActionResult> Index()
         {
             var data = await _movieRepository.GetAllMovies();
-            return View();
+            return View(data);
         }
     }
 }

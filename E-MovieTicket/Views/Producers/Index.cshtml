@@ -1,9 +1,9 @@
 ﻿@using E_MovieTicket.Domain.Models
 
-@model IEnumerable<Actor>
+@model IEnumerable<Producer>
 
 @{
-    ViewData["Title"] = "List of Actor";
+    ViewData["Title"] = "List of Producers";
 }
 <div class="row">
     <div class="col-md-8 offset-md-2">
@@ -15,15 +15,15 @@
                     <th>@Html.DisplayNameFor(model => model.FirstName)</th>
                     <th>@Html.DisplayNameFor(model => model.LastName)</th>
                     <th>@Html.DisplayNameFor(model => model.Biography)</th>
-                    <th>Actions</th>               
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach(var item in Model)
+                @foreach (var item in Model)
                 {
                     <tr>
                         <td class="align-middle">
-                            <img class="rounded-circle" src="@item.ProfilePictureUrl" alt="@item.FirstName" style="max-width: 150px"/>
+                            <img class="rounded-circle" src="@item.ProfilePictureUrl" alt="@item.FirstName" style="max-width: 150px" />
                         </td>
                         <td class="align-middle">
                             @Html.DisplayFor(modelItem => item.FirstName)
@@ -35,15 +35,15 @@
                             @Html.DisplayFor(modelItem => item.Biography)
                         </td>
                         <td class="align-middle">
-                            <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> 
-                            <a class="btn btn-outline-info"><i class="bi bi-eye"></i>Details</a> 
-                            <a class="btn btn-outline-danger"><i class="bi bi-trash3"></i>Delete</a> 
-                           
+                            <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a>
+                            <a class="btn btn-outline-info"><i class="bi bi-eye"></i>Details</a>
+                            <a class="btn btn-outline-danger"><i class="bi bi-trash3"></i>Delete</a>
+
                         </td>
                     </tr>
                 }
             </tbody>
-          
+
         </table>
     </div>
 </div>
