@@ -1,19 +1,16 @@
 ﻿using E_MovieTicket.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E_MovieTicket.Persistence.Dependecies
 {
     public static class DIServiceExtension
     {
-        public static void AddDependencies(this IServiceCollection services, IConfiguration config)
+        public static void AddDependencies(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<EMovieTicketDbContext>(options =>
-            options.UseSqlServer(config.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
         }
     }
 }

@@ -9,3 +9,6 @@ C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Appli
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\refint\E-MovieTicket.Application.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.pdb
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\ref\E-MovieTicket.Application.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\bin\Debug\net7.0\E-MovieTicket.Application.runtimeconfig.json
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.csproj.AssemblyReference.cache
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Application\obj\Debug\net7.0\E-MovieTicket.Application.genruntimeconfig.cache
