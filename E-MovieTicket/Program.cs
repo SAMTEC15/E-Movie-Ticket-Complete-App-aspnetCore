@@ -1,3 +1,5 @@
+using E_MovieTicket.Application.Interfaces;
+using E_MovieTicket.Application.Services;
 using E_MovieTicket.Persistence.Context;
 using E_MovieTicket.Persistence.Repositories;
 using E_MovieTicket.Persistence.Seeder;
@@ -15,9 +17,14 @@ builder.Services.AddDbContext<EMovieTicketDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IActorRespository, ActorRepository>();
+builder.Services.AddScoped<IActorsService, ActorsService>();
 builder.Services.AddScoped<IProducerRepository, ProducerRepository>();
+builder.Services.AddScoped<IProducersService, ProducersService>();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IMoviesService,  MoviesService>();
 builder.Services.AddScoped<ICinemaRepository, CinemaRepository>();
+builder.Services.AddScoped<ICinemasService, CinemasService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

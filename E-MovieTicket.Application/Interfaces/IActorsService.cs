@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace E_MovieTicket.Application.Interfaces
 {
-    public interface IActorService
-    {
-        IEnumerable<Actor> GetAllActor();
+    public interface IActorsService
+    {       
+        Task<Actor> GetActorById(int? id);
+        Task<List<Actor>> GetAllActors();
+        Task<Actor> AddActor(Actor actor);
+        Task<Actor> RemoveActor(int id);
+        Task<Actor> UpdateActor(int id, Actor actor);
+        Task<Actor> RemoveAllActors();
     }
 }

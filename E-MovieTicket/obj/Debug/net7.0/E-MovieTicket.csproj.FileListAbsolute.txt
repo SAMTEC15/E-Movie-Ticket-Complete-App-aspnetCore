@@ -79,3 +79,5 @@ C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\D
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\E-MovieTicket.Persistence.pdb
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\E-MovieTicket.Domain.pdb
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\E-MovieTicket.Common.pdb
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\E-MovieTicket.Application.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\E-MovieTicket.Application.pdb

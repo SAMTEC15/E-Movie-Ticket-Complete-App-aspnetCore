@@ -11,7 +11,8 @@
           "E-MovieTicket.Persistence": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "7.0.0"
+          "Microsoft.EntityFrameworkCore.Tools": "7.0.0",
+          "E-MovieTicket.Application": "1.0.0.0"
         },
         "runtime": {
           "E-MovieTicket.dll": {}
@@ -654,6 +655,14 @@
         "runtime": {
           "E-MovieTicket.Persistence.dll": {}
         }
+      },
+      "E-MovieTicket.Application/1.0.0.0": {
+        "runtime": {
+          "E-MovieTicket.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1158,6 +1167,11 @@
     },
     "E-MovieTicket.Persistence/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "E-MovieTicket.Application/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

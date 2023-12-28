@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\E-MovieTicket.Application\E-MovieTicket.Application.csproj" />
     <ProjectReference Include="..\E-MovieTicket.Persistence\E-MovieTicket.Persistence.csproj" />
   </ItemGroup>
 

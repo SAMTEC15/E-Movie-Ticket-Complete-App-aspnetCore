@@ -10,5 +10,10 @@ namespace E_MovieTicket.Persistence.Repositories
     public interface IActorRespository
     {
         Task<List<Actor>> GetAllActor();
+        Task<Actor> GetActorById(int? id);       
+        Task<Actor> AddActor(Actor actor);
+        Task<Actor> RemoveActor(int id);
+        Task<Actor> UpdateActor(int id, Actor actor);
+        Task<Actor> RemoveAllActors();
     }
 }

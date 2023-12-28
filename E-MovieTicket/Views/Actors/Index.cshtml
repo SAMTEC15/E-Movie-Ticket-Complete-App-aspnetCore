@@ -35,10 +35,10 @@
                             @Html.DisplayFor(modelItem => item.Biography)
                         </td>
                         <td class="align-middle">
-                            <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> 
-                            <a class="btn btn-outline-info"><i class="bi bi-eye"></i>Details</a> 
-                            <a class="btn btn-outline-danger"><i class="bi bi-trash3"></i>Delete</a> 
-                           
+                            <a class="btn btn-outline-primary" asp-controller="Actors" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Edit</a> 
+                            <a class="btn btn-outline-info" asp-controller="Actors" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye"></i>Details</a>
+                            <a class="btn btn-outline-danger" asp-controller="Actors" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash3"></i>Delete</a>
+
                         </td>
                     </tr>
                 }
@@ -48,4 +48,6 @@
     </div>
 </div>
 
-
+<div style="position: fixed; right: 25px; bottom: 25px;" class="text-white">
+    <a asp-controller="Actors" asp-action="Create" class="btn btn-success"><i class="bg-info bi-plus-circle"></i> Add New Actor</a>
+</div>
