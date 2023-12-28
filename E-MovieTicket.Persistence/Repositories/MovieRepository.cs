@@ -17,7 +17,7 @@ namespace E_MovieTicket.Persistence.Repositories
         {
             _eMovieTicketDbContext = eMovieTicketDbContext;
         }
-        public async Task<List<Movie>> GetAllMovies() => await _eMovieTicketDbContext.Movies.ToListAsync();
+        public async Task<List<Movie>> GetAllMovies() => await _eMovieTicketDbContext.Movies.Include(u => u.Cinema).OrderBy(u => u.Title).ToListAsync();
 
         
         
