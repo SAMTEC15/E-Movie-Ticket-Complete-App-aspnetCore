@@ -81,8 +81,8 @@ namespace E_MovieTicket.Controllers
             if (actorDetails == null)
                 return View("NotFound");
             var deleteActor = await _actorsService.RemoveActor(id);
-            if (deleteActor == null)
-                return View("NotFound");
+            //if (deleteActor == null)
+               // return View("NotFound");
             return RedirectToAction(nameof(Index));
         }
     }
