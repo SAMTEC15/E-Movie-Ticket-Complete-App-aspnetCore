@@ -9,8 +9,8 @@ namespace E_MovieTicket.Application.Interfaces
 {
     public interface IActorsService
     {       
-        Task<Actor> GetActorById(int? id);
-        Task<List<Actor>> GetAllActors();
+        Task<Actor> GetActorById(int id);
+        Task<IEnumerable<Actor>> GetAllActors();
         Task<Actor> AddActor(Actor actor);
         Task<Actor> RemoveActor(int id);
         Task<Actor> UpdateActor(int id, Actor actor);

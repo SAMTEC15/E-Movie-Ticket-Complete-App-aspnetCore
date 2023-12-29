@@ -1,5 +1,6 @@
 using E_MovieTicket.Application.Interfaces;
 using E_MovieTicket.Application.Services;
+using E_MovieTicket.Persistence.Base;
 using E_MovieTicket.Persistence.Context;
 using E_MovieTicket.Persistence.Repositories;
 using E_MovieTicket.Persistence.Seeder;
@@ -24,6 +25,7 @@ builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 builder.Services.AddScoped<IMoviesService,  MoviesService>();
 builder.Services.AddScoped<ICinemaRepository, CinemaRepository>();
 builder.Services.AddScoped<ICinemasService, CinemasService>();
+//builder.Services.AddScoped<IEntityBaseRepository, EntityBaseRepository>();
 
 var app = builder.Build();
 

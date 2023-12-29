@@ -1,10 +1,11 @@
-﻿using System;
+﻿using E_MovieTicket.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace eTickets.Data.Base
+namespace E_MovieTicket.Persistence.Base
 {
     public interface IEntityBaseRepository<T> where T: class, IEntityBase, new()
     {
@@ -12,8 +13,8 @@ namespace eTickets.Data.Base
         Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includeProperties);
         Task<T> GetByIdAsync(int id);
         Task<T> GetByIdAsync(int id, params Expression<Func<T, object>>[] includeProperties);
-        Task AddAsync(T entity);
-        Task UpdateAsync(int id, T entity);
-        Task DeleteAsync(int id);
+        Task<T> AddAsync(T entity);
+        Task<T> UpdateAsync(int id, T entity);
+        Task<T> DeleteAsync(int id);
     }
 }

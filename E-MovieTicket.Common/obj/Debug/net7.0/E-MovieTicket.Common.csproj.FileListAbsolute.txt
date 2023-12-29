@@ -1,6 +1,8 @@
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\bin\Debug\net7.0\E-MovieTicket.Common.deps.json
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\bin\Debug\net7.0\E-MovieTicket.Common.runtimeconfig.json
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\bin\Debug\net7.0\E-MovieTicket.Common.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\bin\Debug\net7.0\E-MovieTicket.Common.pdb
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\E-MovieTicket.Common.csproj.AssemblyReference.cache
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\E-MovieTicket.Common.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\E-MovieTicket.Common.AssemblyInfoInputs.cache
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\E-MovieTicket.Common.AssemblyInfo.cs
@@ -8,7 +10,5 @@ C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Commo
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\E-MovieTicket.Common.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\refint\E-MovieTicket.Common.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\E-MovieTicket.Common.pdb
-C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\ref\E-MovieTicket.Common.dll
-C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\bin\Debug\net7.0\E-MovieTicket.Common.runtimeconfig.json
-C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\E-MovieTicket.Common.csproj.AssemblyReference.cache
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\E-MovieTicket.Common.genruntimeconfig.cache
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Common\obj\Debug\net7.0\ref\E-MovieTicket.Common.dll

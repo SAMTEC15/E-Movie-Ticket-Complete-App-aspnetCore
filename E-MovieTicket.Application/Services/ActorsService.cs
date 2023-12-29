@@ -19,7 +19,7 @@ namespace E_MovieTicket.Application.Services
         }
         public async Task<Actor> AddActor(Actor actor)
         {
-            var addActor = await _actorRepository.AddActor(actor);
+            var addActor = await _actorRepository.AddAsync(actor);
             if(addActor == null )
             {
                 return null;
@@ -27,17 +27,19 @@ namespace E_MovieTicket.Application.Services
             return addActor;
         }
 
-        public async Task<Actor> GetActorById(int? id)
+        public async Task<Actor> GetActorById(int id)
         {
             if (id == null)
                 return null;
-          var details = await _actorRepository.GetActorById(id);
+          var details = await _actorRepository.GetByIdAsync(id);
+            if (details == null)
+                return null;
             return details;
         }
 
-        public async Task<List<Actor>> GetAllActors()
+        public async Task<IEnumerable<Actor>> GetAllActors()
         {
-            var result = await _actorRepository.GetAllActor();
+            var result = await _actorRepository.GetAllAsync();
             return result;
         }
 
@@ -45,7 +47,7 @@ namespace E_MovieTicket.Application.Services
         {           
             if (id == null)
                 return null;
-           var actor = await _actorRepository.RemoveActor(id);
+           var actor = await _actorRepository.DeleteAsync(id);
             return actor;
 
         }
@@ -59,7 +61,7 @@ namespace E_MovieTicket.Application.Services
         {
             if (id == null)
                 return null;
-           await _actorRepository.UpdateActor(id, actor);
+           await _actorRepository.UpdateAsync(id, actor);
             return actor;
         }
     }

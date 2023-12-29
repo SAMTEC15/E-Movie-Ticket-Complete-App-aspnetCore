@@ -1,4 +1,5 @@
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\bin\Debug\net7.0\E-MovieTicket.Domain.deps.json
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\bin\Debug\net7.0\E-MovieTicket.Domain.runtimeconfig.json
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\bin\Debug\net7.0\E-MovieTicket.Domain.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\bin\Debug\net7.0\E-MovieTicket.Domain.pdb
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\bin\Debug\net7.0\E-MovieTicket.Common.dll
@@ -12,6 +13,5 @@ C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domai
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\obj\Debug\net7.0\E-MovieTicket.Domain.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\obj\Debug\net7.0\refint\E-MovieTicket.Domain.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\obj\Debug\net7.0\E-MovieTicket.Domain.pdb
-C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\obj\Debug\net7.0\ref\E-MovieTicket.Domain.dll
-C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\bin\Debug\net7.0\E-MovieTicket.Domain.runtimeconfig.json
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\obj\Debug\net7.0\E-MovieTicket.Domain.genruntimeconfig.cache
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket.Domain\obj\Debug\net7.0\ref\E-MovieTicket.Domain.dll

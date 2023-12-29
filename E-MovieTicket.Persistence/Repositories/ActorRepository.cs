@@ -1,4 +1,5 @@
 ﻿using E_MovieTicket.Domain.Models;
+using E_MovieTicket.Persistence.Base;
 using E_MovieTicket.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,16 +10,14 @@ using System.Threading.Tasks;
 
 namespace E_MovieTicket.Persistence.Repositories
 {
-    public class ActorRepository : IActorRespository
+    public class ActorRepository : EntityBaseRepository<Actor>, IActorRespository
     {
         private readonly EMovieTicketDbContext _eMovieTicketDbContext;
 
-        public ActorRepository(EMovieTicketDbContext eMovieTicketDbContext)
-        {
-            _eMovieTicketDbContext = eMovieTicketDbContext;
-        }
+        public ActorRepository(EMovieTicketDbContext eMovieTicketDbContext) : base(eMovieTicketDbContext) { }
+        
 
-        public async Task<Actor> AddActor(Actor actor)
+        /*public async Task<Actor> AddActor(Actor actor)
         {
           
            if(actor == null)
@@ -70,6 +69,6 @@ namespace E_MovieTicket.Persistence.Repositories
             return actorCheck;
         }
 
-       
+     */  
     }
 }
