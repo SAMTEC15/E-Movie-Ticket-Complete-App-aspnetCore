@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace E_MovieTicket.Domain.Models
 {
-    public class Movie
+    public class Movie : IEntityBase
     {
         [Key]
         public int Id { get; set; }

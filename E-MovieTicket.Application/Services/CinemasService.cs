@@ -31,9 +31,14 @@ namespace E_MovieTicket.Application.Services
         public Task<IEnumerable<Cinema>> GetAllCinemas() => _cinemaRepository.GetAllAsync();
        
 
-        public Task<Cinema> GetCinemaById(int id)
+        public async Task<Cinema> GetCinemaById(int id)
         {
-            throw new NotImplementedException();
+            if (id == null)
+                return null;
+            var details = await _cinemaRepository.GetByIdAsync(id);
+            if (details == null)
+                return null;
+            return details;
         }
 
         public Task<Cinema> RemoveAllCinemas()
@@ -41,14 +46,20 @@ namespace E_MovieTicket.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<Cinema> RemoveCinema(int id)
+        public async Task<Cinema> RemoveCinema(int id)
         {
-            throw new NotImplementedException();
+            if (id == null)
+                return null;
+            var cinemas = await _cinemaRepository.DeleteAsync(id);
+            return cinemas;
         }
 
-        public Task<Cinema> UpdateCinema(int id, Cinema cinema)
+        public async Task<Cinema> UpdateCinema(int id, Cinema cinema)
         {
-            throw new NotImplementedException();
+            if (id == null)
+                return null;
+            await _cinemaRepository.UpdateAsync(id, cinema);
+            return cinema;
         }
     }
 }

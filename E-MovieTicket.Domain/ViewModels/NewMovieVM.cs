@@ -1,14 +1,14 @@
 ﻿using E_MovieTicket.Common.Enums;
 using System.ComponentModel.DataAnnotations;
 
-namespace E_MovieTicket.Domain.Models
+namespace E_MovieTicket.Domain.ViewModels
 {
     public class NewMovieVM
     {
-        public int Id { get; set; }
+        // public int Id { get; set; }
 
-        [Display(Name = "Movie name")]
-        [Required(ErrorMessage = "Name is required")]
+        [Display(Name = "Movie Title")]
+        [Required(ErrorMessage = "Title is required")]
         public string Title { get; set; }
 
         [Display(Name = "Movie description")]
