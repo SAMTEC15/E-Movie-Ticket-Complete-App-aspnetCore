@@ -5,7 +5,7 @@ namespace E_MovieTicket.Domain.ViewModels
 {
     public class NewMovieVM
     {
-        // public int Id { get; set; }
+         public int Id { get; set; }
 
         [Display(Name = "Movie Title")]
         [Required(ErrorMessage = "Title is required")]

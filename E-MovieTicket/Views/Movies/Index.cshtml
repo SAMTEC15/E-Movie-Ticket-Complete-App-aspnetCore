@@ -21,7 +21,7 @@
                                 <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
                                 }  *@
                                   
-                                    <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                                    <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
                                 </h5>
                             </p>
                         </div>
@@ -83,5 +83,5 @@
 
     }
 </div>
-
+@await Html.PartialAsync("_CreateItem", "Movies")
 

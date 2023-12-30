@@ -1,5 +1,6 @@
 ﻿using E_MovieTicket.Application.Interfaces;
 using E_MovieTicket.Domain.Models;
+using E_MovieTicket.Domain.ViewModels;
 using E_MovieTicket.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
@@ -40,14 +41,42 @@ namespace E_MovieTicket.Application.Services
         {
             throw new NotImplementedException();
         }
-
-        public Task<Movie> UpdateMovie(int id, Movie movie)
-        {
-            throw new NotImplementedException();
-        }
+        
         public async Task<Movie> GetMovieByIdAsync(int id)
         {
-          return  await _movieRepository.GetMovieByIdAsync(id);
+            return await _movieRepository.GetMovieByIdAsync(id);
+        }
+
+        public Task<NewMovieDropdownsVM> GetNewMovieDropdownsValue() => _movieRepository.NewMovieDropdownsValue();
+
+        public async Task<Movie> AddNewMovieAsync(NewMovieVM newMovieVM)
+        {
+           var addMovie = await _movieRepository.AddNewMovie(newMovieVM);
+            return addMovie;
+          
+        }
+
+        public async Task<Movie> UpdateMovieAsync(int id, NewMovieVM newMovieVM)
+        {
+            /*    var movieDetails = await _movieRepository.GetMovieByIdAsync(id);
+                if (movieDetails == null)
+                    return null;
+                var response = new NewMovieVM
+                {
+                    Id = movieDetails.Id,
+                    Title = movieDetails.Title,
+                    Description = movieDetails.Description,
+                    Price = movieDetails.Price,
+                    ImageUrl = movieDetails.ImageUrl,
+                    MovieCategory = movieDetails.MovieCategory,
+                    CinemaId = movieDetails.CinemaId,
+                    ProducerId = movieDetails.ProducerId,
+                    ActorIds = movieDetails.ActorMovies.Select(u => u.ActorId).ToList(),
+                };
+                var updateMovieDetails = _movieRepository.UpdateMovie(response);
+                return updateMovieDetails;*/
+
+            return await _movieRepository.UpdateMovieAsync(newMovieVM);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using E_MovieTicket.Domain.Models;
+using E_MovieTicket.Domain.ViewModels;
 using E_MovieTicket.Persistence.Base;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,8 @@ namespace E_MovieTicket.Persistence.Repositories
     {
        // Task<List<Movie>> GetAllMovies();
        Task<Movie> GetMovieByIdAsync(int id);
+        Task<NewMovieDropdownsVM> NewMovieDropdownsValue();
+        Task<Movie> AddNewMovie(NewMovieVM newMovieVM);
+        Task<Movie> UpdateMovieAsync(NewMovieVM newMovieVM);
     }
 }
