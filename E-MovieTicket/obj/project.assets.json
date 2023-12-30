@@ -1166,6 +1166,22 @@
           }
         }
       },
+      "E-MovieTicket.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "E-MovieTicket.Domain": "1.0.0",
+          "E-MovieTicket.Persistence": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E-MovieTicket.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E-MovieTicket.Application.dll": {}
+        }
+      },
       "E-MovieTicket.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3557,6 +3573,11 @@
         "version.txt"
       ]
     },
+    "E-MovieTicket.Application/1.0.0": {
+      "type": "project",
+      "path": "../E-MovieTicket.Application/E-MovieTicket.Application.csproj",
+      "msbuildProject": "../E-MovieTicket.Application/E-MovieTicket.Application.csproj"
+    },
     "E-MovieTicket.Common/1.0.0": {
       "type": "project",
       "path": "../E-MovieTicket.Common/E-MovieTicket.Common.csproj",
@@ -3575,6 +3596,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "E-MovieTicket.Application >= 1.0.0",
       "E-MovieTicket.Persistence >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
@@ -3608,6 +3630,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Application\\E-MovieTicket.Application.csproj": {
+              "projectPath": "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Application\\E-MovieTicket.Application.csproj"
+            },
             "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Persistence\\E-MovieTicket.Persistence.csproj": {
               "projectPath": "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Persistence\\E-MovieTicket.Persistence.csproj"
             }

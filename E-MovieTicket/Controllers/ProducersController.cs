@@ -8,7 +8,7 @@ namespace E_MovieTicket.Controllers
 {
     public class ProducersController : Controller
     {
-        private readonly IProducersService _producersService ;
+        private readonly IProducersService _producersService;
 
         public ProducersController(IProducersService producersService)
         {
@@ -60,15 +60,19 @@ namespace E_MovieTicket.Controllers
             {
                 return View(producer);
             }
-            var update = await _producersService.UpdateProducer(id, producer);
-            if (update == null)
-                return View("NotFound");
-            return RedirectToAction(nameof(Index));
+            if (id == producer.Id)
+            {
+                var update = await _producersService.UpdateProducer(id, producer);
+                if (update == null)
+                    return View(producer);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(producer);
         }
 
         public async Task<IActionResult> Delete(int id)
         {
-            var producerDetails = await _producersService.RemoveProducer(id);
+            var producerDetails = await _producersService.GetProducersById(id);
             if (producerDetails == null)
                 return View("NotFound");
             return View(producerDetails);
@@ -82,7 +86,7 @@ namespace E_MovieTicket.Controllers
                 return View("NotFound");
             var deleteActor = await _producersService.RemoveProducer(id);
             //if (deleteActor == null)
-                //return View("NotFound");
+            //return View("NotFound");
             return RedirectToAction(nameof(Index));
         }
     }

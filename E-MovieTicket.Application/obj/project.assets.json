@@ -59,6 +59,39 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1132,6 +1165,51 @@
             "rid": "win"
           }
         }
+      },
+      "E-MovieTicket.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E-MovieTicket.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E-MovieTicket.Common.dll": {}
+        }
+      },
+      "E-MovieTicket.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "E-MovieTicket.Common": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E-MovieTicket.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E-MovieTicket.Domain.dll": {}
+        }
+      },
+      "E-MovieTicket.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "E-MovieTicket.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E-MovieTicket.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E-MovieTicket.Persistence.dll": {}
+        }
       }
     }
   },
@@ -1190,6 +1268,32 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "sha512": "Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
+        "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "sha512": "ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -3452,10 +3556,27 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "E-MovieTicket.Common/1.0.0": {
+      "type": "project",
+      "path": "../E-MovieTicket.Common/E-MovieTicket.Common.csproj",
+      "msbuildProject": "../E-MovieTicket.Common/E-MovieTicket.Common.csproj"
+    },
+    "E-MovieTicket.Domain/1.0.0": {
+      "type": "project",
+      "path": "../E-MovieTicket.Domain/E-MovieTicket.Domain.csproj",
+      "msbuildProject": "../E-MovieTicket.Domain/E-MovieTicket.Domain.csproj"
+    },
+    "E-MovieTicket.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../E-MovieTicket.Persistence/E-MovieTicket.Persistence.csproj",
+      "msbuildProject": "../E-MovieTicket.Persistence/E-MovieTicket.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "E-MovieTicket.Domain >= 1.0.0",
+      "E-MovieTicket.Persistence >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0"
@@ -3487,7 +3608,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Domain\\E-MovieTicket.Domain.csproj": {
+              "projectPath": "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Domain\\E-MovieTicket.Domain.csproj"
+            },
+            "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Persistence\\E-MovieTicket.Persistence.csproj": {
+              "projectPath": "C:\\Users\\user1\\source\\Personal\\Project2\\E-MovieTicketProject\\E-MovieTicket.Persistence\\E-MovieTicket.Persistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

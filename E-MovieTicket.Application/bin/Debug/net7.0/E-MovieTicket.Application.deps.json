@@ -8,11 +8,11 @@
     ".NETCoreApp,Version=v7.0": {
       "E-MovieTicket.Application/1.0.0": {
         "dependencies": {
+          "E-MovieTicket.Domain": "1.0.0",
+          "E-MovieTicket.Persistence": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "7.0.0",
-          "E-MovieTicket.Domain": "1.0.0.0",
-          "E-MovieTicket.Persistence": "1.0.0.0"
+          "Microsoft.EntityFrameworkCore.Tools": "7.0.0"
         },
         "runtime": {
           "E-MovieTicket.Application.dll": {}
@@ -57,6 +57,29 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
           }
         }
       },
@@ -672,28 +695,34 @@
           }
         }
       },
-      "E-MovieTicket.Domain/1.0.0.0": {
+      "E-MovieTicket.Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
+        },
         "runtime": {
-          "E-MovieTicket.Domain.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "E-MovieTicket.Common.dll": {}
         }
       },
-      "E-MovieTicket.Persistence/1.0.0.0": {
+      "E-MovieTicket.Domain/1.0.0": {
+        "dependencies": {
+          "E-MovieTicket.Common": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
+        },
         "runtime": {
-          "E-MovieTicket.Persistence.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "E-MovieTicket.Domain.dll": {}
         }
       },
-      "E-MovieTicket.Common/1.0.0.0": {
+      "E-MovieTicket.Persistence/1.0.0": {
+        "dependencies": {
+          "E-MovieTicket.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
+        },
         "runtime": {
-          "E-MovieTicket.Common.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "E-MovieTicket.Persistence.dll": {}
         }
       }
     }
@@ -724,6 +753,20 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -1173,18 +1216,18 @@
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
-    "E-MovieTicket.Domain/1.0.0.0": {
-      "type": "reference",
+    "E-MovieTicket.Common/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "E-MovieTicket.Persistence/1.0.0.0": {
-      "type": "reference",
+    "E-MovieTicket.Domain/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "E-MovieTicket.Common/1.0.0.0": {
-      "type": "reference",
+    "E-MovieTicket.Persistence/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

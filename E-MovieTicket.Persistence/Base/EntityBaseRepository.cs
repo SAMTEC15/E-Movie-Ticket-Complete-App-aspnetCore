@@ -53,9 +53,22 @@ namespace E_MovieTicket.Persistence.Base
         public async Task<T> UpdateAsync(int id, T entity)
         {
             EntityEntry entityEntry = _eMovieTicketDbContext.Entry<T>(entity);
-            entityEntry.State = EntityState.Modified;  
-            await _eMovieTicketDbContext.SaveChangesAsync();
-            return entity;
+            entityEntry.State = EntityState.Modified;
+
+            try
+            {
+                await _eMovieTicketDbContext.SaveChangesAsync();
+                return entity;
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                // Handle concurrency conflict here
+                // You can reload the entity from the database and merge changes, or log the conflict, etc.
+                // Example: Reload the entity
+                var databaseEntity = await _eMovieTicketDbContext.Set<T>().FindAsync(id);
+                _eMovieTicketDbContext.Entry(databaseEntity).Reload();
+                throw; // rethrow the exception or handle as appropriate
+            }
         }
     }
 }
