@@ -81,3 +81,12 @@ C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\obj\D
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\obj\Debug\net7.0\E-MovieTicket.pdb
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\obj\Debug\net7.0\E-MovieTicket.genruntimeconfig.cache
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\obj\Debug\net7.0\ref\E-MovieTicket.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.WebApiCompatShim.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Microsoft.Azure.WebJobs.Host.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Microsoft.Azure.WebJobs.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Microsoft.Azure.WebJobs.Extensions.Http.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\obj\Debug\net7.0\E-MovieTicket.MvcApplicationPartsAssemblyInfo.cs

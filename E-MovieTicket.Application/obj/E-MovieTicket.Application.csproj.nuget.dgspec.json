@@ -268,9 +268,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Http.Abstractions": {
+            "Microsoft.Azure.WebJobs.Extensions.Http": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

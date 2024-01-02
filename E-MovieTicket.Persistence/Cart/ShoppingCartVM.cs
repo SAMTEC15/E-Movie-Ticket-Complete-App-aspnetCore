@@ -1,6 +1,4 @@
-﻿using E_MovieTicket.Domain.Cart;
-
-namespace E_MovieTicket.Domain.ViewModels
+﻿namespace E_MovieTicket.Persistence.Cart
 {
     public class ShoppingCartVM
     {

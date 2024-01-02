@@ -201,6 +201,30 @@ namespace EMovieTicket.Persistence.Migrations
                     b.ToTable("Producers");
                 });
 
+            modelBuilder.Entity("E_MovieTicket.Domain.Models.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ShoppingCartId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("ShoppingCartItems");
+                });
+
             modelBuilder.Entity("E_MovieTicket.Domain.Models.ActorMovie", b =>
                 {
                     b.HasOne("E_MovieTicket.Domain.Models.Actor", "Actor")
@@ -256,6 +280,15 @@ namespace EMovieTicket.Persistence.Migrations
                     b.Navigation("Movie");
 
                     b.Navigation("Order");
+                });
+
+            modelBuilder.Entity("E_MovieTicket.Domain.Models.ShoppingCartItem", b =>
+                {
+                    b.HasOne("E_MovieTicket.Domain.Models.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId");
+
+                    b.Navigation("Movie");
                 });
 
             modelBuilder.Entity("E_MovieTicket.Domain.Models.Actor", b =>

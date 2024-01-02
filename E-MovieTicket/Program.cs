@@ -1,6 +1,7 @@
 using E_MovieTicket.Application.Interfaces;
 using E_MovieTicket.Application.Services;
 using E_MovieTicket.Persistence.Base;
+using E_MovieTicket.Persistence.Cart;
 using E_MovieTicket.Persistence.Context;
 using E_MovieTicket.Persistence.Repositories;
 using E_MovieTicket.Persistence.Seeder;
@@ -25,7 +26,13 @@ builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 builder.Services.AddScoped<IMoviesService,  MoviesService>();
 builder.Services.AddScoped<ICinemaRepository, CinemaRepository>();
 builder.Services.AddScoped<ICinemasService, CinemasService>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrdersService, OrdersService>();
 //builder.Services.AddScoped<IEntityBaseRepository, EntityBaseRepository>();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped(u => ShoppingCart.GetShoppingCart(u));
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -42,6 +49,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthorization();
 

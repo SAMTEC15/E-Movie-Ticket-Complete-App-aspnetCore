@@ -3,11 +3,6 @@ using E_MovieTicket.Domain.Models;
 using E_MovieTicket.Persistence.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E_MovieTicket.Persistence.Seeder
 {
