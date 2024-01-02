@@ -1,6 +1,7 @@
 ﻿using E_MovieTicket.Application.Interfaces;
 using E_MovieTicket.Persistence.Cart;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace E_MovieTicket.Controllers
 {
@@ -49,6 +50,23 @@ namespace E_MovieTicket.Controllers
             }
             return RedirectToAction(nameof(ShoppingCart));
         }
+        public async Task<IActionResult> CompleteOrder()
+        {
+            var items = _shoppingCart.GetShoppingCartItems();
+            string userId = "";
+            string userEmailAddress = "";
+
+            await _ordersService.StoreOrderAsync(items, userId, userEmailAddress);
+            await _shoppingCart.ClearShoppingCartAsync();
+
+            return View("OrderCompleted");
+        }
+        public async Task<IActionResult> Index()
+        {
+            string userId = "";
+            var orders = await _ordersService.GetOrderByUserIdAsync(userId);
+            return View(orders);
+        }
         /*public async Task<IActionResult> Index()
         {
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -70,9 +88,7 @@ namespace E_MovieTicket.Controllers
             };
 
             return View(response);
-        }
-
-     
+        }   
 
  
 
