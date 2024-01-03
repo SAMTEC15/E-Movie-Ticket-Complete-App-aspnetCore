@@ -22,10 +22,11 @@ namespace E_MovieTicket.Controllers
         {
             var items = _shoppingCart.GetShoppingCartItems();
             _shoppingCart.ShoppingCartItems = items;
-            var response = new ShoppingCartVM
+
+            var response = new ShoppingCartVM()
             {
                 ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal(),
+                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
             };
             return View(response);
         }
@@ -53,8 +54,8 @@ namespace E_MovieTicket.Controllers
         public async Task<IActionResult> CompleteOrder()
         {
             var items = _shoppingCart.GetShoppingCartItems();
-            string userId = "";
-            string userEmailAddress = "";
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
 
             await _ordersService.StoreOrderAsync(items, userId, userEmailAddress);
             await _shoppingCart.ClearShoppingCartAsync();
@@ -63,45 +64,11 @@ namespace E_MovieTicket.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            string userId = "";
-            var orders = await _ordersService.GetOrderByUserIdAsync(userId);
-            return View(orders);
-        }
-        /*public async Task<IActionResult> Index()
-        {
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             string userRole = User.FindFirstValue(ClaimTypes.Role);
 
-            var orders = await _ordersService.GetOrdersByUserIdAndRoleAsync(userId, userRole);
+            var orders = await _ordersService.GetOrderByUserIdAndRoleAsync(userId, userRole);
             return View(orders);
-        }
-
-        public IActionResult ShoppingCart()
-        {
-            var items = _shoppingCart.GetShoppingCartItems();
-            _shoppingCart.ShoppingCartItems = items;
-
-            var response = new ShoppingCartVM()
-            {
-                ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
-            };
-
-            return View(response);
         }   
-
- 
-
-        public async Task<IActionResult> CompleteOrder()
-        {
-            var items = _shoppingCart.GetShoppingCartItems();
-            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
-
-            await _ordersService.StoreOrderAsync(items, userId, userEmailAddress);
-            await _shoppingCart.ClearShoppingCartAsync();
-
-            return View("OrderCompleted");
-        }*/
     }
 }

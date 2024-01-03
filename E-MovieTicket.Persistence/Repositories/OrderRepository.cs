@@ -16,9 +16,13 @@ namespace E_MovieTicket.Persistence.Repositories
         {
             _eMovieTicketDbContext = eMovieTicketDbContext;
         }
-        public async Task<List<Order>> GetOrderByUserIdAsync(string userId)
+        public async Task<List<Order>> GetOrderByUserIdAndRoleAsync(string userId, string userRole)
         {
-            var orders = await _eMovieTicketDbContext.Orders.Include(o => o.OrderItems).ThenInclude(u => u.Movie).Where(u => u.UserId == userId).ToListAsync();
+            var orders = await _eMovieTicketDbContext.Orders.Include(o => o.OrderItems).ThenInclude(u => u.Movie).Include(u => u.User).ToListAsync();
+            if (userRole != "Admin")
+            {
+                orders = orders.Where(u => u.UserId == userId).ToList();
+            }
             return orders;
         }
 

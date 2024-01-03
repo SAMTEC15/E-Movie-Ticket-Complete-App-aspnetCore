@@ -12,7 +12,7 @@ namespace E_MovieTicket.Application.Services
         {
             _orderRepository = orderRepository;
         }
-        public Task<List<Order>> GetOrderByUserIdAsync(string userId) => _orderRepository.GetOrderByUserIdAsync(userId);
+        public Task<List<Order>> GetOrderByUserIdAndRoleAsync(string userId, string userRole) => _orderRepository.GetOrderByUserIdAndRoleAsync(userId, userRole);
        
 
         public Task StoreOrderAsync(List<ShoppingCartItem> items, string userId, string userEmailAddress) => _orderRepository.StoreOrderAsync(items, userId, userEmailAddress);
