@@ -8,25 +8,37 @@ namespace E_MovieTicket.Application.Services
 {
     public class AccountService : IAccountService
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;       
         private readonly EMovieTicketDbContext _eMovieTicketDbContext;
 
-        public AccountService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, EMovieTicketDbContext eMovieTicketDbContext)
+        public AccountService(UserManager<ApplicationUser> userManager, EMovieTicketDbContext eMovieTicketDbContext)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
+            _userManager = userManager;          
             _eMovieTicketDbContext = eMovieTicketDbContext;
         }
 
-        public Task<ApplicationUser> Login(LoginVM login)
+        public Task<string> Login(LoginVM login)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ApplicationUser> Register(RegisterVM register)
+        public async Task<string> Register(RegisterVM register)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByEmailAsync(register.EmailAddress);
+            if (user != null)
+            {
+                return null;
+            }
+
+            var newUser = new ApplicationUser()
+            {
+                FirsName = register.FirsName,
+                LastName = register.LastName,
+                Email = register.EmailAddress,
+                UserName = register.EmailAddress
+            };
+            var newUserResponse = await _userManager.CreateAsync(newUser, register.Password);
+            return newUserResponse.ToString();
         }
     }
 }

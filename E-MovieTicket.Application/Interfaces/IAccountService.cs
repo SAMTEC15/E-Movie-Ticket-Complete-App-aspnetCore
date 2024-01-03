@@ -10,7 +10,7 @@ namespace E_MovieTicket.Application.Interfaces
 {
     public interface IAccountService
     {
-        Task<ApplicationUser> Register(RegisterVM register);
-        Task<ApplicationUser> Login(LoginVM login);
+        Task<string> Register(RegisterVM register);
+        Task<string> Login(LoginVM login);
     }
 }

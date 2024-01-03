@@ -70,7 +70,8 @@ namespace E_MovieTicket.Controllers
 
             var newUser = new ApplicationUser()
             {
-                FirsName = registerVM.FullName,
+                FirsName = registerVM.FirsName,
+                LastName = registerVM.LastName,
                 Email = registerVM.EmailAddress,
                 UserName = registerVM.EmailAddress
             };
