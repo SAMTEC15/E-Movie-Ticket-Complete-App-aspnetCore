@@ -1,10 +1,13 @@
 using E_MovieTicket.Application.Interfaces;
 using E_MovieTicket.Application.Services;
+using E_MovieTicket.Domain.Models;
 using E_MovieTicket.Persistence.Base;
 using E_MovieTicket.Persistence.Cart;
 using E_MovieTicket.Persistence.Context;
 using E_MovieTicket.Persistence.Repositories;
 using E_MovieTicket.Persistence.Seeder;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -32,7 +35,15 @@ builder.Services.AddScoped<IOrdersService, OrdersService>();
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped(u => ShoppingCart.GetShoppingCart(u));
+
+//Authentication and Authorization
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<EMovieTicketDbContext>();
+builder.Services.AddMemoryCache();
 builder.Services.AddSession();
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+});
 
 var app = builder.Build();
 
@@ -44,6 +55,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 DbInitalizer.Seed(app); 
+DbInitalizer.SeedUsersAndRolesAsync(app);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -51,6 +63,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

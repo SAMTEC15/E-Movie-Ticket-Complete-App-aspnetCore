@@ -90,3 +90,4 @@ C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\D
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\obj\Debug\net7.0\E-MovieTicket.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user1\source\Personal\Project2\E-MovieTicketProject\E-MovieTicket\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

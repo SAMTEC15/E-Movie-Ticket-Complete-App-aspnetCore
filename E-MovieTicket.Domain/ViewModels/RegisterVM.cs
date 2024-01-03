@@ -8,9 +8,13 @@ namespace E_MovieTicket.Domain.ViewModels
 {
     public class RegisterVM
     {
-        [Display(Name = "Full name")]
+        [Display(Name = "First name")]
         [Required(ErrorMessage = "Full name is required")]
-        public string FullName { get; set; }
+        public string FirsName { get; set; }
+
+        [Display(Name = "Last name")]
+        [Required(ErrorMessage = "Full name is required")]
+        public string LastName { get; set; }
 
         [Display(Name = "Email address")]
         [Required(ErrorMessage = "Email address is required")]

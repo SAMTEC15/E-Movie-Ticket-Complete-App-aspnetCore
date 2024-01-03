@@ -1,4 +1,5 @@
 ﻿using E_MovieTicket.Domain.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace E_MovieTicket.Persistence.Context
 {
-    public class EMovieTicketDbContext : DbContext
+    public class EMovieTicketDbContext : IdentityDbContext<ApplicationUser>
     {
         public EMovieTicketDbContext(DbContextOptions<EMovieTicketDbContext> options) : base(options) { }
 
